@@ -321,3 +321,132 @@ nav ul li:hover {
     padding-top: 15rem;
   }
 }
+.redeem-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 200;  /* On top of everything */
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7); /* Dark overlay */
+  justify-content: center; /* Center content horizontally */
+  align-items: center;     /* Center vertically */
+  cursor: pointer;
+}
+.redeem-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+}
+.scratch-area {
+  position: relative;    /* parent for layering */
+  display: inline-block;
+  width: 300px;
+  height: 150px;
+}
+
+#scratchCanvas {
+  position: absolute;   /* sit on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ccc;
+  cursor: crosshair;
+  z-index: 2;
+}
+
+.voucher-text {
+  position: absolute;   /* centered under canvas */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;           /* below canvas */
+  font-size: 2rem;
+  font-weight: bold;
+  color:#ccc;
+}
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+.movie-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.movie-img {
+  width: 60px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.movie-details {
+  display: flex;
+  flex-direction: column; /* Stack title and rating vertically */
+  align-items: flex-start; /* Align text to the left */
+  gap: 2px; /* Space between title and rating */
+}
+

@@ -81,7 +81,7 @@
             Music catalog. Start your free three-month trial with no commitment,
             and cancel anytime.
           </h4>
-          <button class="primary-btn">Start Your Trail Now</button>
+          <button class="primary-btn"  id="startTrialBtn">Start Your Trial Now</button>
 
           <p>
             Orange Music is available in myTunes, and for iOS and Android
@@ -103,7 +103,7 @@
           Just tap to play, or even download if you’re going somewhere you won’t
           have Wi-Fi.
         </p>
-        <button class="secondary-btn">Read more</button>
+        <button id="readMoreBtn"class="secondary-btn">Read more</button>
         <div class="mac-img">
           <img src="images/mac.png" alt="macbook" />
         </div>
@@ -194,5 +194,45 @@
         <p>Copyright © 2024 Do Some Coding</p>
       </section>
     </footer>
+    <!-- Redeem Modal -->
+    <div class="redeem-modal" id="redeemModal">
+      <div class="redeem-content">
+        <span class="close-redeem" id="closeRedeem">&times;</span>
+        <h2>Scratch your Gift Card 🎁</h2>
+        <div class="scratch-area">
+          <canvas id="scratchCanvas" width="300" height="150"></canvas>
+          <div class="voucher-text" id="voucherText"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Free Trial Section -->
+    <div id="trialInfo"></div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal"id="closeSignUp">
+      <div class="modal-content">
+        <h2>Start Free Trial</h2>
+        <input type="text" id="name" placeholder="Name" /><br /><br />
+        <input type="email" id="email" placeholder="Email" /><br /><br />
+        <button id="submitSignup">Start Trial</button>
+      </div>
+    </div>
+
+    <!-- Fake Payment Modal -->
+    <div class="modal" id="paymentModal">
+      <div class="modal-content">
+        <h2>Upgrade to Premium</h2>
+        <p>Pay ₹499 to unlock full features.</p>
+        <button id="payBtn">Pay Now</button>
+      </div>
+    </div>
+    <!-- Modal -->
+<div id="movieModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <input type="text" id="searchInput" placeholder="Search movies..." />
+    <div id="movieList"></div>
+  </div>
+</div>
   </body>
 </html>
